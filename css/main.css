@@ -25,10 +25,34 @@ body, nav{
     flex-grow: 1;
 }
 .navBottomLine .light{
-    width: 12px;
+    width: 5%;
     background-color: aqua;
     box-shadow: 2px 2px 10px 5px aqua;
     height: 2px;
+    border-radius: 1px;
+    animation: navbarLight 60s ease-in-out infinite;
+}
+@keyframes navbarLight {
+    0%{
+        transform: translateX(0%);
+        opacity: 0.05;
+    }
+    25%{
+
+        opacity: 0.3;
+    }
+    50%{
+        transform: translateX(1900%);
+        opacity: 0;
+    }
+    75%{
+
+        opacity: 0.3;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 0.05;
+    }
 }
 
 
