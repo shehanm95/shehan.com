@@ -131,7 +131,7 @@ nav img{
         flex-direction: column;
     }
     .navLinks{
-        color: var(--c_back_highlight);
+        color: var(--btn_dark_txt_color);
         height: 5vh;
     }
     
