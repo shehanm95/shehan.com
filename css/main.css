@@ -5,24 +5,62 @@
 }
 
 :root{
-    --C_back_Color:rgb(1, 4, 24);
-    --C_back_light:rgb(2, 8, 46);
-    --C_back_highlight:aqua;
+    --c_back_Color:rgb(1, 4, 24);
+    --c_back_light:rgb(7, 17, 82);
+    --c_back_highlight:aqua;
+    --t_light_aqua_hover:aqua;
+    --btn_light_back_color:aqua;
+    --btn_light_hover_back_color:rgb(98, 255, 255);
+    --btn_dark_txt_color:rgb(49, 62, 160);
+    
 
 }
 
 body, nav{
-    background-color: var(--C_back_Color);
+    background-color: var(--c_back_Color);
     flex-direction: column;
 }
 
+
 .navLinks{
     padding:0 10px 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight:600;
 }
+.navLinks:hover{
+   animation: linkHover 1s ease-in forwards;
+   text-decoration: underline;
+   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+   
+}
+@keyframes linkHover{
+    0%{}
+    100%{
+        color: var(--t_light_aqua_hover);}
+   
+}
+
+.btn-my-light{
+    background-color: var(--btn_light_back_color);
+    padding: 6px 11px 6px 11px;
+    margin: 3px;
+    color: var(--btn_dark_txt_color);
+    font-weight:700;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.btn-my-light:hover{
+    background-color: var(--btn_light_hover_back_color);
+    box-shadow: 0px 0px 10px 0px var(--btn_light_hover_back_color);
+}
+
 .navBottomLine{
-    background-color: var(--C_back_light);
+    margin-top: 4px;
+    background-color: var(--c_back_light);
     height: 3px;
     flex-grow: 1;
+    width: 100%;
 }
 .navBottomLine .light{
     width: 5%;
@@ -35,7 +73,7 @@ body, nav{
 @keyframes navbarLight {
     0%{
         transform: translateX(0%);
-        opacity: 0.05;
+        opacity: 0.1;
     }
     25%{
 
@@ -54,7 +92,9 @@ body, nav{
         opacity: 0.05;
     }
 }
-
+nav img{
+    width: 200px;
+}
 
 /* common */
 
