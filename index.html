@@ -18,9 +18,9 @@
             <div id="navList" class="links">
                 <div id="navclose" class="not-display-in-pc navCloseButton"><i class="fa fa-window-close" aria-hidden="true"></i></div>
                 <a class="navLinks" href="index.html">Home</a>
-                <a class="navLinks" href="about.html">About</a>
-                <a class="navLinks" href="caontact.html">Contact</a>
                 <a class="navLinks" href="services.html">Services</a>
+                <a class="navLinks" href="work.html">work</a>
+                <a class="navLinks" href="caontact.html">Contact</a>
                 <a class="btn-my-light" target="_blank" href="https://www.linkedin.com/in/shehan-maleesha-017a89261/">Hire Me</a>
             </div>
             <div id="navbutton" class="navbutton d-sm-none d-sm-inline-block">
@@ -63,20 +63,15 @@ window.addEventListener('scroll', function() {
     // Get the current scroll position
     const scrollPosition = window.scrollY;
 
-    console.log(Math.floor(scrollPosition) + " > "+ vh);
-    if (Math.floor(scrollPosition)  >  vh) {
-        console.log("down");
-        scrollButton.classList.remove("d-none");
-    } else {
-        console.log("top");
-        scrollButton.classList.add("d-none");
-    }
+    // console.log(Math.floor(scrollPosition) + " > "+ vh);
+    // if (Math.floor(scrollPosition)  >  vh) {
+    //     console.log("down");
+    //     scrollButton.classList.remove("d-none");
+    // } else {
+    //     console.log("top");
+    //     scrollButton.classList.add("d-none");
+    // }
 });
-
-// document.getElementsByClassName("navLinks").addEventListener('click',(e)=>{
-//     document.getElementById("navList").classList.add("move-right");
-// })
-
 
 scrollButton.addEventListener('click', function() {
     window.scrollTo({
