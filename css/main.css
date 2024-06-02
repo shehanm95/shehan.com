@@ -129,17 +129,7 @@ nav img{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        animation: navbarLoad 1s ease-in forwards;
     }
-    /* @keyframes navbarLoad {
-        0%{
-        right: -120%;
-    }
-        100%{
-            right: 0; 
-        }
-    } */
-
     .navLinks{
         color: var(--c_back_highlight);
         height: 5vh;
@@ -147,24 +137,33 @@ nav img{
     
 }
 
+
+#moveUp{
+    color: white;
+    position: fixed;
+    top: 90%;
+    right: 10%;
+}
+
 .move-left{
-    animation: navbarLoad 1s ease-in forwards;
+    animation: navbarLoad 0.5s ease-in forwards;
 }
 @keyframes navbarLoad {
     0%{
-        right: 0; 
+        right: -100%;
+         
     } 100%{
-    right: -120%;
+        right: 0;
 }}
 .move-right{
-    animation: navbarUnLoad 1s ease-in forwards;
+    animation: navbarUnLoad 0.5s ease-in forwards;
 }
 
 @keyframes navbarUnLoad {
     0%{
         right: 0; 
     } 100%{
-    right: -120%;
+    right: -100%;
 }
    
 }
@@ -195,7 +194,7 @@ nav img{
     flex-direction: column;
 }
 .defaultContent{
-    height: 800px;
+    height: 200vh;
     background-color: brown;
 
 }

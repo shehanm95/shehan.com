@@ -15,7 +15,7 @@
             <a href="index.html" class="flex-grow-1">
                 <img src="images/logo-01.png" alt="shehan- website-logo" class="logo">
             </a>
-            <div id="navList" class="links hidden">
+            <div id="navList" class="links">
                 <div id="navclose" class="not-display-in-pc navCloseButton"><i class="fa fa-window-close" aria-hidden="true"></i></div>
                 <a class="navLinks" href="index.html">Home</a>
                 <a class="navLinks" href="about.html">About</a>
@@ -37,17 +37,49 @@
     <footer>
 
     </footer>
+    <div class="d-none" id="moveUp"><i class='far fa-arrow-alt-circle-up' style='font-size:36px'></i></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
     document.getElementById("navbutton").addEventListener('click', (e)=>{
         console.log("clicked");
-        document.getElementById("navList").classList.toggle("move-left");
+        document.getElementById("navList").classList.add("move-left");
+        document.getElementById("navList").classList.remove("move-right");
     })
     
     document.getElementById("navclose").addEventListener('click',(e)=>{
-        document.getElementById("navList").classList.toggle("move-right");
+        document.getElementById("navList").classList.remove("move-left");
+        document.getElementById("navList").classList.add("move-right");
     })
+
+    var scrollButton =document.getElementById('moveUp');
+
+
+window.addEventListener('scroll', function() {
+    // Get the viewport height
+    const vh = window.innerHeight;
+    // Calculate 120% of the viewport height
+    const threshold = 1 * vh;
+    // Get the current scroll position
+    const scrollPosition = window.scrollY;
+
+    console.log(Math.floor(scrollPosition) + " > "+ vh);
+    if (Math.floor(scrollPosition)  >  vh) {
+        console.log("down");
+        scrollButton.classList.remove("d-none");
+    } else {
+        console.log("top");
+        scrollButton.classList.add("d-none");
+    }
+});
+
+
+scrollButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+    });
+});
 </script>
 
 </html>
