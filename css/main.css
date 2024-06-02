@@ -23,6 +23,7 @@ body, nav{
 
 
 .navLinks{
+    z-index: 5;
     padding:0 10px 0 10px;
     color: white;
     text-decoration: none;
@@ -118,7 +119,8 @@ nav img{
 
     }
     .links{
-        background-color: white;
+        z-index: 2;
+        background-color: rgb(255, 255, 255);
         position: fixed;
         z-index: 1;
         right: -120%;
