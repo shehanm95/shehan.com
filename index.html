@@ -36,25 +36,25 @@
         <div class="homecontnet wrap">
             <div class="intro flex justify-content-evenly p-md-5">
                 <div class="textarea white">
-                    <h6></h6>Software Engineer</h6>
                     <h1>Hello I'm</h1>
+                    <h6 class="text-shadow-glow typewriter" id="typewriter"></h6>
                     <h1 class="aqua">Shehan Maleesha</h1>
                     <p>Dedicated to design new things in the internet,</p>
                     <br>
                     <p>I have the next half of artificial intelignce</p>
-                    </p class="text-glow"> it's creativity.</p>
+                    <p class="text-shadow-glow"> it's creativity.</p>
                 </div>
                 <div class="outerCircle center flex">
                     <div class="bars ">
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
-                        <div class="bar">ooo</div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
                     </div>
                     <div class="innerCircle center">
                         <img src="images/shehan maleesha.png" alt="shehan maleesha photo">
@@ -62,73 +62,37 @@
                 </div>
 
                 <style>
-                    .intro{
-                        flex-wrap:wrap ;
-                    }
-                    .textarea{
-                        margin:0 0px 0 30px;
-                    }
-                    .outerCircle{
-                        margin:0 30px 0 30px;
-                        min-width: 300px;
-                        max-width: 350px;
-                        flex-grow: 1;
-                    position: relative;
-                      width: 40%;
-                      border-radius: 50%;
-                      overflow: hidden;
-                      box-shadow: 0px 0px 10px 0px aqua;
-                        
-                    }
-                    .outerCircle:hover{
-                        box-shadow: 0px 0px 30px 0px aqua;
-                    }
-                    .bars{
-                        z-index: -1;
-                        width: 100%;
-                        /* border: 3px dashed aqua; */
-                        height: 101%;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: space-between;
-                        flex-direction: column;
-                        align-items: center;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        animation: rotate 10s infinite linear;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-                    .bar{
-                        height: 6%;
-                        background-color: aqua;
-                        width: 140%;
-                        /* margin-top: 10%; */
-                    }
-                    .innerCircle{
-                        border-radius: 50%;
-                        width: 98%;
-                        height: 98%;
-                        overflow: hidden;
-                    }
-                    .innerCircle img{
-                        /* z-index: 1; */
-                        /* display: none; */
-                        border-radius: 50%;
-                        width: 100%;
-                        overflow: hidden;
-                    }
+                  
                 </style>
             </div>
+        
+            <!-- ============Experience area    ================= -->
+            
+            <div class="experience flex pt-5 flex-row flex-wrap justify-content-between">
+                <div class="exItem">
+                    <h1 class="d-inline-block">06</h1>
+                    <p class="d-inline-block">Years of <br>
+                    Experience</p>
+                </div>
+                <div class="exItem">
+                    <h1 class="d-inline-block">78</h1>
+                    <p class="d-inline-block">Projects<br>
+                    Completed</p>
+                </div>
+                <div class="exItem">
+                    <h1 class="d-inline-block">04</h1>
+                    <p class="d-inline-block">Technologies <br>
+                    Mastered</p>
+                </div>
+                <div class="exItem">
+                    <h1 class="d-inline-block">135</h1>
+                    <p class="d-inline-block">Code <br>
+                    Commits</p>
+                </div>
+            </div>
+            
+            <!-- ============Experience area END    ================= -->
+        
         </div>
     </main>
     <footer>
@@ -176,6 +140,56 @@ scrollButton.addEventListener('click', function() {
         behavior: 'smooth' // Optional: Adds a smooth scrolling effect
     });
 });
+
+
+// ==================================Type writing effects ==========================
+document.addEventListener('DOMContentLoaded', () => {
+    const typewriterElement = document.getElementById('typewriter');
+    const textArray = [
+        "Software Engineer.....",
+        "Game Developer.....",
+        "UX / UI designer.....",
+        "YouTuber....",
+        "Tutor....."
+    ];
+
+    let currentIndex = 0;
+    let charIndex = 0;
+    let erasing = false;
+    let delay = 200;
+    const typingDelay = 150;
+    const erasingDelay = 100;
+    const newTextDelay = 2000; // Delay before starting to type the next text
+
+    function type() {
+        if (!erasing) {
+            if (charIndex < textArray[currentIndex].length) {
+                typewriterElement.textContent += textArray[currentIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                erasing = true;
+                setTimeout(type, newTextDelay);
+            }
+        } else {
+            if (charIndex > 0) {
+                typewriterElement.textContent = textArray[currentIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(type, erasingDelay);
+            } else {
+                erasing = false;
+                currentIndex++;
+                if (currentIndex >= textArray.length) {
+                    currentIndex = 0;
+                }
+                setTimeout(type, typingDelay + 500); // Small delay before typing next text
+            }
+        }
+    }
+
+    setTimeout(type, delay);
+});
+// ==================================Type writing effects END ==========================
 </script>
 
 </html>
