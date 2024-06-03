@@ -12,6 +12,7 @@
 :root{
     --c_back_Color:rgb(1, 4, 24);
     --c_back_light:rgb(7, 17, 82);
+    --aqua:aqua;
     --c_back_highlight:aqua;
     --t_light_aqua_hover:aqua;
     --btn_light_back_color:aqua;
@@ -92,8 +93,8 @@ body, nav{
 }
 .navBottomLine .light{
     width: 5%;
-    background-color: aqua;
-    box-shadow: 2px 2px 10px 5px aqua;
+    background-color:var(--aqua);
+    box-shadow: 2px 2px 10px 5px var(--aqua);
     height: 2px;
     border-radius: 1px;
     animation: navbarLight 60s ease-in-out infinite;
@@ -237,3 +238,22 @@ nav{
 .check{
     border: 1px solid red;
 }
+
+@keyframes start-form-right{
+    0%{
+     transform: translateX(-20%);
+     opacity: 0;
+    } 
+ }
+ @keyframes start-form-left{
+    0%{
+     transform: translateX(20%);
+     opacity: 0;
+    } 
+ }
+ @keyframes start-form-down{
+    0%{
+     transform: translateY(20%);
+     opacity: 0;
+    } 
+ }
