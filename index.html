@@ -51,11 +51,13 @@
                                 <span class=" material-symbols-outlined">
                             download
                             </span></div></a>
-                        <a class="social center" target="_blank" href="https://www.linkedin.com/in/shehan-maleesha-017a89261/"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a class="social center"  target="_blank" href="https://github.com/shehanm95"><i class="fa-brands fa-github"></i></a>
-                        <a class="social center"  target="_blank" href="https://www.youtube.com/channel/UCpH_c0vdcc4hldc22ilMVgg"><i class="fa-brands fa-youtube"></i></a>
-                        <a class="social center"  target="_blank" href="https://play.google.com/store/apps/dev?id=4845380326082321253"><i class="fa-brands fa-google-play"></i></a>
-                    </div>
+                                <div class="socialseperated d-flex ">
+                            <a class="social center" target="_blank" href="https://www.linkedin.com/in/shehan-maleesha-017a89261/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a class="social center"  target="_blank" href="https://github.com/shehanm95"><i class="fa-brands fa-github"></i></a>
+                            <a class="social center"  target="_blank" href="https://www.youtube.com/channel/UCpH_c0vdcc4hldc22ilMVgg"><i class="fa-brands fa-youtube"></i></a>
+                            <a class="social center"  target="_blank" href="https://play.google.com/store/apps/dev?id=4845380326082321253"><i class="fa-brands fa-google-play"></i></a>
+
+</div></div>
                     <style>
                         .cv ,.social{
                             margin-right: 7px;
@@ -76,6 +78,18 @@
                             border-radius: 20px;
                             padding: 0 13px 0 13px;
 
+                        }
+                        @media (max-width:867px){
+                            .socialAndCV{
+                                flex-direction: column !important;
+                            }
+                            .cv{
+                                margin: 10px 0 20px 0;
+                              justify-content: start;  
+                            }
+                            .social{
+                                margin: 10px 20px 0 20px;
+                            }
                         }
                         .social i{
                          color:var(--aqua);
@@ -126,7 +140,7 @@
         
             <!-- ============Experience area    ================= -->
             
-            <div class="experience flex flex-row flex-wrap justify-content-between">
+            <div class="experience flex flex-row flex-wrap  justify-content-between">
                 <div class="exItem">
                     <h1 class="d-inline-block">06</h1>
                     <p class="d-inline-block">Years of <br>

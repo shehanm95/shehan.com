@@ -108,3 +108,8 @@ transform: rotate(360deg);
 .exItem:hover p, .exItem:hover h1 {
     text-shadow: 0 0 5px #fff;
 }
+
+@media (max-width:542px){
+    .experience{
+    margin-top: 20px;}
+}
