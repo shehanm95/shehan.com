@@ -257,3 +257,9 @@ nav{
      opacity: 0;
     } 
  }
+ @keyframes start-form-down-long{
+    0%{
+     transform: translateY(40%);
+     opacity: 0;
+    } 
+ }
