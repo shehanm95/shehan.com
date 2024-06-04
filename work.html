@@ -38,11 +38,12 @@
                 <div>
                     <h1>My Works</h1>
                     <p>In Different areas...</p>
-                    <p class="explain ">I am a person hwo is try do what ever the things correctly</p>
+                    <p class="explain ">I am a person hwo is try do what ever the things I do correctly.</p>
                 </div>
                 <a href="#" class="tab">As A Web Developer</a>
                 <a href="#" class="tab">As A Game Developer</a>
                 <a href="#" class="tab">As A Tutor /&nbsp;YouTuber</a>
+                <a href="#" class="tab">As A Graphic Designer</a>
                 <a href="#" class="tab">As A Software Developer</a>
             </div>
             <div class="col-9">
@@ -52,7 +53,11 @@
                         <p>I think I am a clever web developer, I can Design nice user interfaces</p>
                     </div>
                     <div class="workItem">
-                        <a target="_blank" href="https://shehanm95.github.io/m95.com/"><img src="images/webdeveloper/oldPersonalWebsite2.png" alt=""></a>
+                        <a target="_blank" href="https://shehanm95.github.io/m95.com/"><img src="images/webdeveloper/oldPersonalWebsite2.png" alt="">
+                        <div class="workDetails">
+                            <h2>Old Personal Website</h2>
+                            <p>I have made this in 2020 as a sample website.</p>
+                        </div></a>
                     </div>
                 </div>
             </div>
@@ -64,10 +69,32 @@
 
 
     <style>
-        *{
-            max-width: 100wv;
-            overflow: hidden;
+        .workDetails{
+            position: absolute;
+            top: 100%;
+            background-color: rgba(0, 119, 119, 0.75);
+            color: white;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            text-align: center;
+            flex-direction: column;
         }
+        .workItem:hover .workDetails{
+            animation: showBanner 0.6s ease-in forwards;
+        }
+        @keyframes showBanner{
+            0%{
+                top: 100%;
+                opacity: 0;
+            }
+            100%{
+                top: 0%;
+                opacity:1;
+            }
+        }
+
         .describe p{
             color: aquamarine;
         }
@@ -81,15 +108,19 @@
 
         }
         .workItem{
+            position: relative;
             height: 180px;
             width: 280px;
             border: 2px solid darkblue;
             border-radius: 15px;
             overflow: hidden;
             animation: start-form-down-long 1.3s ease-out forwards;
+           
         }
+        
         .workItem:hover{
             border: 2px solid var(--aqua);
+            
         }
 
         .workItem a{
@@ -189,5 +220,14 @@
 //     });
 // });
 </script>
-
+<style>
+    @media (min-width: 1000px){
+        h1{
+        font-size: 6.5vmin;
+    }
+    p{
+        font-size: 2.5vmin;
+    }
+    }
+    </style>
 </html>
