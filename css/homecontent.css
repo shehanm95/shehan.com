@@ -82,9 +82,16 @@ transform: rotate(360deg);
 
 
 /* ==================================Experience ================ */
+.experience{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 .exItem {
     display: flex;
+    min-width: 200px;
     justify-content: center;
     color: white;
     flex-grow: 1;
@@ -112,4 +119,16 @@ transform: rotate(360deg);
 @media (max-width:542px){
     .experience{
     margin-top: 20px;}
+}
+@media (max-width:400px){
+    .experience{
+        flex-direction: column;
+    }
+    .experience br{
+        display: none;
+    }
+    .experience h1{
+       font-size: 30px;
+    }
+
 }
