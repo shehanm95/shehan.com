@@ -41,13 +41,13 @@
                     <p>In Different areas...</p>
                     <p class="explain ">I am a person hwo is try do what ever the things I do correctly.</p>
                 </div>
-                <a onclick="chooseCategory('webDeveloper')" href="#webDeveloper" class="tab">As A Web Developer</a>
-                <a onclick="chooseCategory('gameDeveloper')" href="#gameDeveloper" class="tab">As A Game Developer</a>
-                <a onclick="chooseCategory('YouTuber')" href="#YouTuber" class="tab">As A Tutor /&nbsp;YouTuber</a>
-                <a onclick="chooseCategory('Designer')" href="#Designer" class="tab">As A Graphic Designer</a>
-                <a onclick="chooseCategory('Software')" href="#Software" class="tab">As A Software Developer</a>
+                <a onclick="chooseCategory('webDeveloper')" href="#holder" class="tab">As A Web Developer</a>
+                <a onclick="chooseCategory('gameDeveloper')" href="#holder" class="tab">As A Game Developer</a>
+                <a onclick="chooseCategory('YouTuber')" href="#holder" class="tab">As A Tutor /&nbsp;YouTuber</a>
+                <a onclick="chooseCategory('Designer')" href="#holder" class="tab">As A Graphic Designer</a>
+                <a onclick="chooseCategory('Software')" href="#holder" class="tab">As A Software Developer</a>
             </div>
-            <div class="col-12 col-md-9">
+            <div id="holder" class="col-12 col-md-9">
                 <div id="webDeveloper" class="workCategory col-12">
                     <div class="describe">
                         <h2>As A Web Developer</h2>
@@ -84,7 +84,6 @@
         
     </main>
     <footer>
-
     </footer>
     
     <!-- SCROLL BUTTON TO BE REMOVED <div class="d-none" id="moveUp"><i class='far fa-arrow-alt-circle-up' style='font-size:36px'></i></div> -->
@@ -160,19 +159,19 @@
         addWorkItem(gameDeveloper,"Feli In The BCI",
         "I have made this game as a game developer",
         "images/gameDeveloper/Feli In The BCI.png",
-        "https://www.youtube.com/watch?v=V0A5VFR_hiA");
+        "https://youtu.be/4C1Z1GRJENo");
         addWorkItem(gameDeveloper,"fighter Mobile",
         "I have made this game as a game developer",
         "images/gameDeveloper/fighter Mobile.png",
-        "https://www.youtube.com/watch?v=V0A5VFR_hiA");
+        "https://play.google.com/store/apps/details?id=com.easternpearl.fightermobile");
         addWorkItem(gameDeveloper,"Fruit Catcher",
         "I have made this game as a game developer",
         "images/gameDeveloper/Fruit Catcher.png",
-        "https://www.youtube.com/watch?v=2ynYGgMQ14A&t=14s");
+        "https://play.google.com/store/apps/details?id=com.easternPearl.test");
         addWorkItem(gameDeveloper,"Pearl Harbor Attack",
         "I have made this game as a game developer",
         "images/gameDeveloper/Pearl Harbor Attack.png",
-        "https://www.youtube.com/watch?v=V0A5VFR_hiA");
+        "https://youtu.be/_iWh3xzRM6E");
         addWorkItem(gameDeveloper,"Pirate Cannon",
         "I have made this game as a game developer",
         "images/gameDeveloper/Pirate Cannon.png",
@@ -180,7 +179,7 @@
         addWorkItem(gameDeveloper,"Path Finder",
         "I have made this game as a game developer",
         "images/gameDeveloper/Path Finder.png",
-        "https://www.youtube.com/watch?v=V0A5VFR_hiA");
+        "https://youtu.be/IekF_sBsut0");
         }
         // ADD WORK ITEM AREA YOUTUBER======================================
         { 
@@ -208,12 +207,18 @@
         "images/youTuber/Recursion Functions in C++.png",
         "https://youtu.be/P129tsrdWSI"
         );
-
+        
         }
         // ADD WORK ITEM AREA DESIGNER=======================================
         {}
         // ADD WORK ITEM AREA SOFTWARE=======================================
-        {}
+        {addWorkItem(Software,
+            "Group Work Evaluator", 
+            "C++ Software Development",
+            "images/softwareDeveloper/GROUP WORK EVALUATOR SOFTWARE THUMBNAIL-01.jpg",
+            "https://youtu.be/cG_GdkfQ67o"
+            );
+        }
     
 
         //       
