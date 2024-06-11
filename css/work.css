@@ -67,21 +67,7 @@
 .workCategoryHolder{
     flex-basis: 70%;
 }
-@media (max-width:847px){
-    .sidebar{
-    flex-basis: 100%;
-}
-.workCategoryHolder{
-    flex-basis: 100%;
-}
-.workCategory{
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
 
-}
-
-}
 
 .workItem:hover{
     border: 2px solid var(--aqua);
@@ -119,4 +105,21 @@ flex-wrap: wrap;
 }
 .workContent{
     color: white;
+}
+
+@media (max-width:847px){
+    .sidebar{
+    flex-basis: 100%;
+}
+.workCategoryHolder{
+    flex-basis: 100%;
+}
+.workCategory{
+align-items: start;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+
+}
+
 }
