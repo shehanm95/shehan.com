@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/work.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Shehan.com | Works</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body class="center">
     <nav class="wrap d-flex p-3 pt-md-4">
@@ -21,9 +22,9 @@
             <div id="navList" class="links">
                 <div id="navclose" class="not-display-in-pc navCloseButton"><i class="fa fa-window-close" aria-hidden="true"></i></div>
                 <a class="navLinks" href="index.html">Home</a>
-                <a class="navLinks" href="services.html">Services</a>
+                <a class="navLinks" href="work.html">Services</a>
                 <a class="navLinks" href="work.html">work</a>
-                <a class="navLinks" href="caontact.html">Contact</a>
+                <a class="navLinks" target="_blank" href="https://www.linkedin.com/in/shehan-maleesha-017a89261/">Contact</a>
                 <a class="btn-my-light" target="_blank" href="https://www.linkedin.com/in/shehan-maleesha-017a89261/">Hire Me</a>
             </div>
             <div id="navbutton" class="navbutton not-display-in-pc ">
@@ -35,7 +36,7 @@
         <div class="light "></div>
     </div>
     <main class="workContent wrap d-flex mt-0 mt-sm-4">
-            <div class="col-12 col-md-3 sidebar">
+            <div class="sidebar">
                 <div>
                     <h1>My Works</h1>
                     <p>In Different areas...</p>
@@ -47,7 +48,35 @@
                 <a onclick="chooseCategory('Designer')" href="#holder" class="tab">As A Graphic Designer</a>
                 <a onclick="chooseCategory('Software')" href="#holder" class="tab">As A Software Developer</a>
             </div>
-            <div id="holder" class="col-12 col-md-9">
+            <style>
+                .workContent{
+                    display: flex;
+                    flex-wrap: wrap
+                }
+                .sidebar{
+                    flex-basis: 30%;
+                }
+                .workCategoryHolder{
+                    flex-basis: 70%;
+                }
+                @media (max-width:847px){
+                    .sidebar{
+                    flex-basis: 100%;
+                }
+                .workCategoryHolder{
+                    flex-basis: 100%;
+                }
+            .workCategory{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+            }
+
+                }
+
+            </style>
+            <div id="holder" class="col-12 col-md-9 workCategoryHolder">
                 <div id="webDeveloper" class="workCategory col-12">
                     <div class="describe">
                         <h2>As A Web Developer</h2>
@@ -84,6 +113,7 @@
         
     </main>
     <footer>
+
     </footer>
     
     <!-- SCROLL BUTTON TO BE REMOVED <div class="d-none" id="moveUp"><i class='far fa-arrow-alt-circle-up' style='font-size:36px'></i></div> -->
@@ -210,7 +240,39 @@
         
         }
         // ADD WORK ITEM AREA DESIGNER=======================================
-        {}
+        {
+            addWorkItem(Designer,
+            "Graphic Designer", 
+            "+7 years Graphic Designer Experience ",
+            "images/grapicDesigner/designer 1.jpg",
+            "https://www.fiverr.com/mshehan1995/design-your-hand-drawn-logo"
+            );
+            addWorkItem(Designer,
+            "Graphic Designer", 
+            "+7 years Graphic Designer Experience ",
+            "images/grapicDesigner/designer 2.jpg",
+            "https://www.fiverr.com/mshehan1995/design-your-hand-drawn-logo"
+            );
+            addWorkItem(Designer,
+            "Graphic Designer", 
+            "+7 years Graphic Designer Experience ",
+            "images/grapicDesigner/designer 3.jpg",
+            "https://www.fiverr.com/mshehan1995/design-your-hand-drawn-logo"
+            );
+            addWorkItem(Designer,
+            "Graphic Designer", 
+            "+7 years Graphic Designer Experience ",
+            "images/grapicDesigner/designer 4.jpg",
+            "https://www.fiverr.com/mshehan1995/design-your-minimal-logo"
+            );
+            addWorkItem(Designer,
+            "Graphic Designer", 
+            "+7 years Graphic Designer Experience ",
+            "images/grapicDesigner/designer 5.jpg",
+            "https://www.fiverr.com/mshehan1995/design-your-minimal-logo"
+            );
+
+        }
         // ADD WORK ITEM AREA SOFTWARE=======================================
         {addWorkItem(Software,
             "Group Work Evaluator", 

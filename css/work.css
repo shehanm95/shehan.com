@@ -30,7 +30,7 @@
 }
 .workCategory{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     margin: 0 10px 0 10px;
     padding: 7px;
     background-color: var(--c_back_light);
