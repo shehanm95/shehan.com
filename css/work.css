@@ -49,6 +49,39 @@
     display: inline-block;
    
 }
+@media (max-width:300px) {
+    .workItem{
+        position: relative;
+        height: 170px;
+        width: 270px;
+        margin: 0;
+}}
+
+.workContent{
+    display: flex;
+    flex-wrap: wrap
+}
+.sidebar{
+    flex-basis: 30%;
+}
+.workCategoryHolder{
+    flex-basis: 70%;
+}
+@media (max-width:847px){
+    .sidebar{
+    flex-basis: 100%;
+}
+.workCategoryHolder{
+    flex-basis: 100%;
+}
+.workCategory{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+
+}
+
+}
 
 .workItem:hover{
     border: 2px solid var(--aqua);
