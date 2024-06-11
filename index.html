@@ -36,7 +36,7 @@
     <main>
         <div class="homecontnet wrap">
             <div class="intro flex justify-content-md-between justify-content-center pt-md-5 pb-md-5">
-                <div class="textarea white">
+                <div class="textarea ms-sm-4 white">
                     <h1>Hello I'm</h1>
                     <h6 class="text-shadow-glow typewriter" id="typewriter"></h6>
                     <h1 class="aqua">Shehan Maleesha</h1>
@@ -114,96 +114,7 @@
     <div class="d-none" id="moveUp"><i class='far fa-arrow-alt-circle-up' style='font-size:36px'></i></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script>
-    document.getElementById("navbutton").addEventListener('click', (e)=>{
-        console.log("clicked");
-        document.getElementById("navList").classList.add("move-left");
-        document.getElementById("navList").classList.remove("move-right");
-    })
-    
-    document.getElementById("navclose").addEventListener('click',(e)=>{
-        document.getElementById("navList").classList.remove("move-left");
-        document.getElementById("navList").classList.add("move-right");
-    })
-
-    var scrollButton =document.getElementById('moveUp');
-
-
-window.addEventListener('scroll', function() {
-    // Get the viewport height
-    const vh = window.innerHeight;
-    // Calculate 120% of the viewport height
-    const threshold = 1 * vh;
-    // Get the current scroll position
-    const scrollPosition = window.scrollY;
-
-    // console.log(Math.floor(scrollPosition) + " > "+ vh);
-    // if (Math.floor(scrollPosition)  >  vh) {
-    //     console.log("down");
-    //     scrollButton.classList.remove("d-none");
-    // } else {
-    //     console.log("top");
-    //     scrollButton.classList.add("d-none");
-    // }
-});
-
-scrollButton.addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Optional: Adds a smooth scrolling effect
-    });
-});
-
-
-// ==================================Type writing effects ==========================
-document.addEventListener('DOMContentLoaded', () => {
-    const typewriterElement = document.getElementById('typewriter');
-    const textArray = [
-        "Software Engineer.....",
-        "Game Developer.....",
-        "UX / UI designer.....",
-        "YouTuber....",
-        "Tutor....."
-    ];
-
-    let currentIndex = 0;
-    let charIndex = 0;
-    let erasing = false;
-    let delay = 200;
-    const typingDelay = 150;
-    const erasingDelay = 100;
-    const newTextDelay = 2000; // Delay before starting to type the next text
-
-    function type() {
-        if (!erasing) {
-            if (charIndex < textArray[currentIndex].length) {
-                typewriterElement.textContent += textArray[currentIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, typingDelay);
-            } else {
-                erasing = true;
-                setTimeout(type, newTextDelay);
-            }
-        } else {
-            if (charIndex > 0) {
-                typewriterElement.textContent = textArray[currentIndex].substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(type, erasingDelay);
-            } else {
-                erasing = false;
-                currentIndex++;
-                if (currentIndex >= textArray.length) {
-                    currentIndex = 0;
-                }
-                setTimeout(type, typingDelay + 500); // Small delay before typing next text
-            }
-        }
-    }
-
-    setTimeout(type, delay);
-});
-// ==================================Type writing effects END ==========================
-</script>
+<script src="JS/main.js"></script> 
 
 <style>
 @media (min-width: 1000px){

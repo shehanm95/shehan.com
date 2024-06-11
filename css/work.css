@@ -1,0 +1,89 @@
+.workDetails{
+    position: absolute;
+    top: 100%;
+    background-color: rgba(0, 119, 119, 0.75);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+.workItem:hover .workDetails{
+    animation: showBanner 0.6s ease-in forwards;
+}
+@keyframes showBanner{
+    0%{
+        top: 100%;
+        opacity: 0;
+    }
+    100%{
+        top: 0%;
+        opacity:1;
+    }
+}
+
+.describe p{
+    color: aquamarine;
+}
+.workCategory{
+    width: 100%;
+    height: 100%;
+    margin: 0 10px 0 10px;
+    padding: 7px;
+    background-color: var(--c_back_light);
+    animation: start-form-down 1.3s ease-out forwards;
+
+}
+.workItem{
+    position: relative;
+    height: 180px;
+    width: 280px;
+    border: 2px solid var(--aqua-dark);
+    margin: 3px;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: start-form-down-long 1.3s ease-out forwards;
+    display: inline-block;
+   
+}
+
+.workItem:hover{
+    border: 2px solid var(--aqua);
+    
+}
+
+.workItem a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.workItem a img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.sidebar a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+    height: 45px;
+    background-color: var(--c_back_light);
+    margin: 10px;
+    border-radius: 10px; 
+    font-weight: 300;
+}
+
+.sidebar a:hover{
+    background-color: var(--aqua);
+    color: var(--c_back_light);
+    font-weight: 600;
+    box-shadow: 0 0 10px 0 var(--aqua);
+}
+.workContent{
+    color: white;
+}
