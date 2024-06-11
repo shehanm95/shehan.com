@@ -114,6 +114,10 @@
 .workCategoryHolder{
     flex-basis: 100%;
 }
+.sidebar a{
+    margin-left: 0;
+    margin-right: 0;
+}
 .workCategory{
 align-items: start;
 display: flex;
