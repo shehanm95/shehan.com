@@ -1,25 +1,25 @@
-.white{
-    color: white;
+.white {
+    color: var(--whiteText);
 }
 
-.aqua{
-    color: aqua;
+.aqua {
+    color: var(--aqua);
 }
 
-.typewriter{
+.typewriter {
     height: 30px;
 }
 
-.intro{
-    flex-wrap:wrap ;
+.intro {
+    flex-wrap: wrap;
 }
 
-.textarea{
+.textarea {
     animation: start-form-right 1s ease-out forwards;
 }
 
 
-.outerCircle{
+.outerCircle {
     /* margin:0 30px 0 30px; */
     max-width: 350px;
     max-height: 350px;
@@ -30,22 +30,24 @@
     width: 40%;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0px 0px 10px 0px aqua;
+    box-shadow: 0px 0px 10px 0px var(--aqua);
     animation: start-form-left 1s ease-out forwards;
 }
-.outerCircle:hover{
-    box-shadow: 0px 0px 30px 0px aqua;
+
+.outerCircle:hover {
+    box-shadow: 0px 0px 30px 0px var(--aqua);
 }
 
-@media (max-width: 400px){
-    .outerCircle{
-       max-height: 300px;
-       max-width: 300px; 
-       min-height: 300px;
-       min-width: 300px; 
+@media (max-width: 400px) {
+    .outerCircle {
+        max-height: 300px;
+        max-width: 300px;
+        min-height: 300px;
+        min-width: 300px;
     }
 }
-.bars{
+
+.bars {
     z-index: -1;
     width: 100%;
     /* border: 3px dashed aqua; */
@@ -62,27 +64,30 @@
 }
 
 @keyframes rotate {
-from {
-transform: rotate(0deg);
-}
-to {
-transform: rotate(360deg);
-}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.bar{
+.bar {
     height: 6%;
-    background-color: aqua;
+    background-color: var(--aqua);
     width: 140%;
     /* margin-top: 10%; */
 }
-.innerCircle{
+
+.innerCircle {
     border-radius: 50%;
     width: 98%;
     height: 98%;
     overflow: hidden;
 }
-.innerCircle img{
+
+.innerCircle img {
     /* z-index: 1; */
     /* display: none; */
     border-radius: 50%;
@@ -92,7 +97,7 @@ transform: rotate(360deg);
 
 
 /* ==================================Experience ================ */
-.experience{
+.experience {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,49 +112,59 @@ transform: rotate(360deg);
     flex-grow: 1;
     animation: start-form-down 4s ease-out forwards;
 }
+
 /* min-width: 200px;  missing code cannot find for now*/
-.exItem h1{
+.exItem h1 {
     font-size: 50px;
-    padding-right:5px ;
+    padding-right: 5px;
 }
-.exItem p{
+
+.exItem p {
     padding: 4px 0 0 3px;
     color: rgb(194, 194, 194);
 }
+
 /* for others */
 /* .exItem:hover ~ .exItem p , .exItem:hover ~ .exItem h1 {
         text-shadow: 0 0 5px #fff;
 } */
 
 /* for self */
-.exItem:hover p, .exItem:hover h1 {
+.exItem:hover p,
+.exItem:hover h1 {
     text-shadow: 0 0 5px #fff;
 }
 
-@media (max-width:542px){
-    .experience{
-    margin-top: 20px;}
+@media (max-width:542px) {
+    .experience {
+        margin-top: 20px;
+    }
 }
-@media (max-width:400px){
-    .experience{
+
+@media (max-width:400px) {
+    .experience {
         flex-direction: column;
     }
-    .experience br{
+
+    .experience br {
         display: none;
     }
+
     .experience h1 {
         padding-top: 9px;
-       font-size: 22px;
-       font-weight: 400;
-       padding-bottom: 0;
+        font-size: 22px;
+        font-weight: 400;
+        padding-bottom: 0;
     }
+
     .experience p {
         padding-top: 6px;
         padding-bottom: 0;
-       font-size: 22px;
-       font-weight: 400;
+        font-size: 22px;
+        font-weight: 400;
     }
-    .exItem{
+
+    .exItem {
         border: 1px solid white;
         border-radius: 10px;
         margin-bottom: 10px;
@@ -161,19 +176,23 @@ transform: rotate(360deg);
 
 /* =======================================   social items   =================================== */
 
-.cv ,.social{
+.cv,
+.social {
     margin-right: 7px;
     text-decoration: none;
     color: var(--aqua);
     text-shadow: 0px 0px 2px var(--aqua);
 }
-.cv:hover ,.social:hover{
-    
+
+.cv:hover,
+.social:hover {
+
     text-shadow: 0px 0px 5px var(--aqua);
     box-shadow: 0px 0px 20px var(--aqua);
 
 }
-.cv{
+
+.cv {
     border: 2px solid var(--aqua);
     border-radius: 20px;
     padding: 0 13px 0 13px;
@@ -181,45 +200,53 @@ transform: rotate(360deg);
 
 }
 
-.cv a{
+.cv a {
     font-weight: 200;
 
 }
 
-@media (max-width:867px){
-    .socialAndCV{
+@media (max-width:867px) {
+    .socialAndCV {
         flex-direction: column !important;
     }
-    .cv{
+
+    .cv {
         margin: 10px 0 20px 0;
-      justify-content: start;  
+        justify-content: start;
     }
-    .social{
+
+    .social {
         margin: 10px 10px 0 10px;
     }
 }
-.social i{
- color:var(--aqua);
- font-size: 13px;  
+
+.social i {
+    color: var(--aqua);
+    font-size: 13px;
 }
-.social{ 
+
+.social {
     border: 2px solid var(--aqua);
     border-radius: 50%;
     width: 30px;
-    height: 30px; 
+    height: 30px;
 }
-.social:hover{
+
+.social:hover {
     animation: socialUp .7s linear infinite;
 
 }
-@keyframes socialUp{
-    0%{
+
+@keyframes socialUp {
+    0% {
         transform: translateY(0%);
     }
-    50%{
+
+    50% {
         transform: translateY(-30%);
     }
-    100%{
+
+    100% {
         transform: translateY(0%);
     }
 }

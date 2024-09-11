@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,146 +10,183 @@
     font-style: normal;
 }
 
-:root{
-    --c_back_Color:rgb(1, 4, 24);
-    --c_back_light:rgb(7, 17, 82);
-    --aqua:aqua;
-    --aqua-dark:rgb(0, 125, 125);
-    --c_back_highlight:aqua;
-    --t_light_aqua_hover:aqua;
-    --btn_light_back_color:aqua;
-    --btn_light_hover_back_color:rgb(31, 255, 255);
-    --btn_dark_txt_color:rgb(49, 62, 160);
-    
+:root {
+    --c_back_Color: rgb(1, 4, 24);
+    --c_back_light: rgb(77, 65, 14);
+    --aqua: rgb(255, 204, 0);
+    --aqua-dark: rgb(61, 51, 10);
+    --c_back_highlight: rgb(255, 204, 0);
+    --t_light_aqua_hover: rgb(255, 204, 0);
+    --btn_light_back_color: rgb(255, 204, 0);
+    --btn_light_hover_back_color: rgb(255, 210, 31);
+    --btn_dark_txt_color: rgb(102, 84, 13);
+    --whiteText: rgb(255, 255, 255);
+    --goldText: rgb(255, 204, 0);
+    --portfolio_back: rgb(2, 7, 38);
+    --workDetailsLabelBack: rgba(255, 204, 0, 0.925);
+
 
 }
 
+.goldText {
+    color: var(--goldText);
+}
 
-body, nav{
+
+body,
+nav {
     background-color: var(--c_back_Color);
     flex-direction: column;
 }
 
 
-.navLinks{
+.navLinks {
     z-index: 5;
-    padding:0 10px 0 10px;
+    padding: 0 10px 0 10px;
     color: white;
     text-decoration: none;
-    font-weight:600;
-}
-.navLinks:hover{
-   animation: linkHover 1s ease-in forwards;
-   text-decoration: underline;
-   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
-   
+    font-weight: 600;
 }
 
-.text-hover-glow:hover{
-   
-   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
-   
+.navLinks:hover {
+    animation: linkHover 1s ease-in forwards;
+    text-decoration: underline;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+
 }
-.text-shadow-glow{
+
+.text-hover-glow:hover {
+
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+
+}
+
+.text-shadow-glow {
     animation: glow 5s linear infinite;
 }
-@keyframes glow{
-    0%{
-        text-shadow: 0 0 30px #fff;  
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 30px #fff;
 
     }
-    50%{
-        text-shadow: 0 0 0px #fff;  
+
+    50% {
+        text-shadow: 0 0 0px #fff;
     }
-    100%{
-        text-shadow: 0 0 30px #fff;   
+
+    100% {
+        text-shadow: 0 0 30px #fff;
 
     }
 }
-@keyframes linkHover{
-    0%{}
-    100%{
-        color: var(--t_light_aqua_hover);}
-   
+
+@keyframes linkHover {
+    0% {}
+
+    100% {
+        color: var(--t_light_aqua_hover);
+    }
+
 }
 
-.btn-my-light{
+.btn-my-light {
     background-color: var(--btn_light_back_color);
     padding: 6px 11px 6px 11px;
     margin: 3px;
     color: var(--btn_dark_txt_color);
-    font-weight:700;
+    font-weight: 700;
     border-radius: 20px;
     text-decoration: none;
 }
-.btn-my-light:hover{
+
+.btn-my-light:hover {
     background-color: var(--btn_light_hover_back_color);
     box-shadow: 0px 0px 10px 0px var(--btn_light_hover_back_color);
 }
 
-.navBottomLine{
+.c_back_light {
+    background-color: var(--c_back_Color);
+    width: 100%;
+    height: 100%;
+}
+
+.navBottomLine {
     margin-top: 4px;
     background-color: var(--c_back_light);
     height: 3px;
     flex-grow: 1;
     width: 100%;
 }
-.navBottomLine .light{
+
+.navBottomLine .light {
     width: 5%;
-    background-color:var(--aqua);
+    background-color: var(--aqua);
     box-shadow: 2px 2px 10px 5px var(--aqua);
     height: 2px;
     border-radius: 1px;
     animation: navbarLight 60s ease-in-out infinite;
 }
+
 @keyframes navbarLight {
-    0%{
+    0% {
         transform: translateX(0%);
         opacity: 0.1;
     }
-    25%{
+
+    25% {
 
         opacity: 1;
     }
-    50%{
+
+    50% {
         transform: translateX(1900%);
         opacity: 0;
     }
-    75%{
+
+    75% {
 
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateX(0%);
         opacity: 0.05;
     }
 }
-nav img{
+
+nav img {
     width: 200px;
 }
-.not-display-in-pc{
-    display:none;
+
+.not-display-in-pc {
+    display: none;
 }
-.navCloseButton i{
+
+.navCloseButton i {
     font-size: 27px;
 }
-@media (max-width:640px){
-    .not-display-in-pc{
-        display:inline-block;
+
+@media (max-width:640px) {
+    .not-display-in-pc {
+        display: inline-block;
     }
-    .navCloseButton{
-        display:inline-block;
+
+    .navCloseButton {
+        display: inline-block;
         position: absolute;
         top: 5px;
         left: 5px;
     }
-    nav img{
+
+    nav img {
         width: 40%px;
         padding-top: 5px;
         padding-left: 1vw;
 
     }
-    .links{
+
+    .links {
         z-index: 2;
         background-color: rgb(255, 255, 255);
         position: fixed;
@@ -162,106 +200,124 @@ nav img{
         align-items: center;
         flex-direction: column;
     }
-    .navLinks{
+
+    .navLinks {
         color: var(--btn_dark_txt_color);
         height: 5vh;
     }
-    
+
 }
 
 
-#moveUp{
+#moveUp {
     color: white;
     position: fixed;
     top: 90%;
     right: 10%;
 }
 
-.move-left{
+.move-left {
     animation: navbarLoad 0.5s ease-in forwards;
 }
+
 @keyframes navbarLoad {
-    0%{
+    0% {
         right: -100%;
-         
-    } 100%{
+
+    }
+
+    100% {
         right: 0;
-}}
-.move-right{
+    }
+}
+
+.move-right {
     animation: navbarUnLoad 0.5s ease-in forwards;
 }
 
 @keyframes navbarUnLoad {
-    0%{
-        right: 0; 
-    } 100%{
-    right: -100%;
-}
-   
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+
 }
 
-.navbutton{
+.navbutton {
     padding-right: 7px;
     padding-top: 10px;
     margin-left: auto;
 }
-.navbutton i{
-   color: white;
-   font-size: 30px;
-   margin-left: auto;
+
+.navbutton i {
+    color: white;
+    font-size: 30px;
+    margin-left: auto;
 }
 
 
 /* common */
-.display{
+.display {
     display: inline-block;
 }
-.flex{
+
+.flex {
     display: flex;
 }
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.defaultContent{
+
+.defaultContent {
     height: 200vh;
     background-color: brown;
 
 }
-nav{
+
+nav {
     max-width: 1200px;
 }
-.wrap{
+
+.wrap {
     max-width: 1400px;
     width: 100%;
 }
-.check{
+
+.check {
     border: 1px solid red;
 }
 
-@keyframes start-form-right{
-    0%{
-     transform: translateX(-20%);
-     opacity: 0;
-    } 
- }
- @keyframes start-form-left{
-    0%{
-     transform: translateX(20%);
-     opacity: 0;
-    } 
- }
- @keyframes start-form-down{
-    0%{
-     transform: translateY(20%);
-     opacity: 0;
-    } 
- }
- @keyframes start-form-down-long{
-    0%{
-     transform: translateY(40%);
-     opacity: 0;
-    } 
- }
+@keyframes start-form-right {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+}
+
+@keyframes start-form-left {
+    0% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+}
+
+@keyframes start-form-down {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+}
+
+@keyframes start-form-down-long {
+    0% {
+        transform: translateY(40%);
+        opacity: 0;
+    }
+}
